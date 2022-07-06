@@ -1,6 +1,6 @@
 const db = require('../models')
 const { catchErrors } = require('../middleware/errors')
-//const { NotFoundError } = require('./errors/httpError')
+
 
 const Genre = db.Genre
 

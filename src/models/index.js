@@ -1,14 +1,11 @@
 const Sequelize = require('sequelize')
 
-//const DB_DATABASE =
-//  process.env.DB_DATABASE + (process.env.NODE_ENV == 'test' ? 'test' : '')
-
 const sequelize = new Sequelize('disneyapi', 'postgres', 'admin',
   
   {
     host: process.env.localhost,
     dialect: 'postgres' ,
-    //logging: process.env.NODE_ENV != 'test',
+    
   }
 )
 
@@ -22,7 +19,7 @@ db.Character = require('./character')(sequelize)
 db.Movie = require('./movie')(sequelize)
 db.Genre = require('./genre')(sequelize)
 
-// Associations
+// Asociaciones
 db.Movie.belongsToMany(db.Character, {
   through: 'CharacterMovies',
   as: 'characters',

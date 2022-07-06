@@ -1,6 +1,5 @@
 const jwt = require('jsonwebtoken')
 const db = require('../models')
-//const { JWTAuthenticationError } = require('../controllers/errors/authError')
 const { catchErrors } = require('./errors')
 
 const User = db.User

@@ -2,9 +2,7 @@ const route = require('express').Router()
 const characterController = require('../controllers/characterController')
 const { auth } = require('../middleware/authentication')
 const { uploadImage } = require('../middleware/uploadFile')
-/*const {
-  validateCharacter,
-} = require('../middleware/validators/characterValidator')*/
+
 
 route.use(auth)
 

@@ -1,6 +1,5 @@
 const sgMail = require('@sendgrid/mail')
 const db = require('../models')
-//const { UserExistsError, IncorrectCredentials } = require('./errors/authError')
 const { catchErrors } = require('../middleware/errors')
 
 const User = db.User
